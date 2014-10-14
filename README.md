@@ -1,4 +1,4 @@
-jquery-mt-select
+jQuery Multiple Tag Select
 ================
 
 Impress your visitors with awesome top-notch Search Systems, they will always return !
