@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>jQuery MT Select - Documentation</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <style>
+    .row {
+      width:80%;
+      margin:0 auto;
+    }
+
+    .documentation_box {
+      padding: 5px 20px;
+    }
+  </style>
+</head>
+
+<body style="padding-top: 60px;">
+  <div role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="overview" class="navbar-brand">jQuery MT Select - Version 1.2</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#setup">Setup Process</a></li>
+          <li><a href="#options">Available Options</a></li>
+          <li><a href="#customize">Customization</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <div class="container" >
+    <div id="setup" class="row">
+      <div class="col-lg-12">
+        <h2 class="text-primary text-center">Setting it up</h2>
+
+        <h3 class="text-success">Adding the Library & Stylesheet</h3>
+
+        <img src="img/adding-the-library.png"/>
+
+        <h3 class="text-success">Adding an instance with the default values</h3>
+
+        <img src="img/default_instance.png"/>
+      </div>
+    </div>
+
+    <hr/>
+
+    <div id="options" class="row">
+      <div class="col-lg-12">
+        <h2 class="text-primary text-center">Available Options</h2>
+
+        <h3 class="text-danger text-center">Required</h3>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Alias</th>
+              <th>Description</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>data-mt-request-url</td>
+              <td>The location where the information will be pulled</td>
+              <td><a class="btn btn-primary" href="#data-mt-max-tags">Read More</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="text-success text-center">Optional</h3>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Alias</th>
+              <th>Description</th>
+              <th>Default</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>data-mt-max-tags</td>
+              <td>Max Selected Options</td>
+              <td>1</td>
+              <td><a class="btn btn-primary" href="#data-mt-max-tags">Read More</a></td>
+            </tr>
+            <tr>
+              <td>data-mt-request-method</td>
+              <td>Request Method used to fetch the information from data-mt-request-url</td>
+              <td>POST</td>
+              <td><a class="btn btn-primary" href="#data-mt-request-method">Read More</a></td>
+            </tr>
+            <tr>
+              <td>data-mt-request-tag-name</td>
+              <td>Change the param name that specifies the searched term, which is send to data-mt-request-url</td>
+              <td>mt_filter</td>
+              <td><a class="btn btn-primary" href="#data-mt-request-tag-name">Read More</a></td>
+            </tr>
+            <tr>
+              <td>data-mt-request-selected-tags-name</td>
+              <td>Change the param name that specifies the selected term ids / keys, which is send to data-mt-request-url</td>
+              <td>mt_selected</td>
+              <td><a class="btn btn-primary" href="#data-mt-request-selected-tags-name">Read More</a></td>
+            </tr>
+            <tr>
+              <td>data-mt-clear-on-select</td>
+              <td>Clear Search Input on Option Select</td>
+              <td>1</td>
+              <td><a class="btn btn-primary" href="#data-mt-clear-on-select">Read More</a></td>
+            </tr>
+            <tr>
+              <td>data-mt-close-on-select</td>
+              <td>Close Selection Modal on Option Select</td>
+              <td>1</td>
+              <td><a class="btn btn-primary" href="#data-mt-close-on-select">Read More</a></td>
+            </tr>
+            <tr>
+              <td>data-mt-close-on-unfocus</td>
+              <td>Close Selection Modal on Input unfocus </td>
+              <td>1</td>
+              <td><a class="btn btn-primary" href="#data-mt-close-on-unfocus">Read More</a></td>
+            </tr>
+            <tr>
+              <td>data-mt-tag-input-name</td>
+              <td>Selected option name within the HTML Form</td>
+              <td>tag</td>
+              <td><a class="btn btn-primary" href="#data-mt-tag-input-name">Read More</a></td>
+            </tr>
+            <tr>
+              <td>data-mt-default-values</td>
+              <td>Default Values</td>
+              <td>None</td>
+              <td><a class="btn btn-primary" href="#data-mt-default-values">Read More</a></td>
+            </tr>
+            <tr>
+              <td>data-mt-custom-param-</td>
+              <td>Extra Params on requests</td>
+              <td>None</td>
+              <td><a class="btn btn-primary" href="#data-mt-custom-param">Read More</a></td>    
+            </tr>
+            <tr>
+              <td>data-mt-skeleton</td>
+              <td>Change the Display Skeleton</td>
+              <td>default</td>
+              <td><a class="btn btn-primary" href="#data-mt-skeleton">Read More</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr/>
+
+      <div class="col-lg-12">
+        <h2 class="text-primary text-center">Available Options Documentation</h2>
+
+        <hr/>
+
+        <div class="documentation_box">
+          <h3><span style="color:red;">Mandatory</span> Request URL</h3>
+          <p>The location where the selectable options information will be pulled</p>
+          <p>When retrieving the information, the request will provide these parameters</p>
+          <ul>
+            <li>Search Param. Param Name : <strong></strong></li>
+            <li>Already Selected Tag Ids. Param Name : <strong></strong></li>
+            <li><strong>+ any additional static params you want</strong>, <a class="btn btn-xs btn-success" href="data-mt-custom-param-">Read More</a></li>
+          </ul>
+        </div>
+
+        <hr/>
+
+        <div class="documentation_box">
+          <h3 id="data-mt-max-tags">Max Selected Options</h3>
+          <p>Limit the max selected options using this param</p>
+          <p><strong>Param : <span style="color:red;">data-mt-max-tags</span></strong></p>
+          <p><strong>Default : 1</strong></p>
+          <p><strong>Available options : </strong> any number higher than one.</p>
+        </div>
+
+        <hr/>
+
+        <div class="documentation_box">
+          <h3 id="data-mt-request-method">Request Method used to fetch the information</h3>
+          <p>Specify the Request Method used to fetch the information from data-mt-request-url</p>
+          <p><strong>Param : <span style="color:red;">data-mt-request-method</span></strong></p>
+          <p><strong>Default : POST</strong></p>
+        </div>
+
+        <hr/>
+
+        <div class="documentation_box">
+          <h3 id="data-mt-request-tag-name">Parameter sent, containing the search term</h3>
+          <p>Change the param name that specifies the searched term, which is send to data-mt-request-url</p>
+          <p><strong>Param : <span style="color:red;">data-mt-request-tag-name</span></strong></p>
+          <p><strong>Default : mt_filter</strong></p>
+        </div>
+
+        <hr/>
+
+        <div class="documentation_box">
+          <h3 id="data-mt-request-selected-tags-name">Parameter sent, containing the selected terms</h3>
+          <p>Change the param name that specifies the selected term ids / keys, which is send to data-mt-request-url</p>
+          <p><strong>Param : <span style="color:red;">data-mt-request-selected-tags-name</span></strong></p>
+          <p><strong>Default : mt_selected</strong></p>
+        </div>
+
+        <hr/>
+
+        <div class="documentation_box">
+          <h3 id="data-mt-clear-on-select">Clear Search Input on Option Select</h3>
+          <p>Clear the search input when an option is selected.</p>
+          <p><strong>Param : <span style="color:red;">data-mt-clear-on-select</span></strong></p>
+          <p><strong>Default : 1</strong></p>
+        </div>
+
+        <hr/>
+
+        <div class="documentation_box">
+          <h3 id="data-mt-close-on-select">Close Selection Modal on Option Select</h3>
+          <p>Close selection modal when an option is selected.</p>
+          <p><strong>Param : <span style="color:red;">data-mt-close-on-select</span></strong></p>
+          <p><strong>Default : 1</strong></p>
+        </div>
+
+        <hr/>
+
+        <div class="documentation_box">
+          <h3 id="data-mt-close-on-unfocus">Close Selection Modal on Input Unfocus</h3>
+          <p>Close selection modal when on input unfocus.</p>
+          <p><strong>Param : <span style="color:red;">data-mt-close-on-unfocus</span></strong></p>
+          <p><strong>Default : 1</strong></p>
+        </div>
+
+        <hr/>
+
+        <div class="documentation_box">
+          <h3 id="data-mt-default-values">Default Values</h3>
+          <p>These are the values that appear by already selected when displaying the plugin</p>
+          <p><strong>Param : <span style="color:red;">data-mt-default-values</span></strong></p>
+          <p><strong>Default : None</strong></p>
+          <p><strong>Format</strong> JSON Object, <strong>key : value</strong></p>
+          <p><strong>Examples</strong></p>
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th>HTML Param</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>data-mt-default-values-_lang='{"1" : "tag_name"}'</td>
+            </tr>
+            <tr>
+              <td>data-mt-default-values-_lang='{"1" : "tag_name", "2" : "another_tag"}'</td>
+            </tr>
+            <tr>
+              <td>data-mt-default-values-_lang='{"1" : "tag_name", "2" : "another_tag", "3" : "An another one"}'</td>
+            </tr>
+            <tr>
+              <td colspan=2 class="text-center text-primary">And many more.</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr/>
+
+        <div class="documentation_box">
+          <h3 id="data-mt-tag-input-name">Selected option name within the HTML Form</h3>
+          <p>Selected option name within the HTML Form.</p>
+          <p>Using the default name, the selected options will come like, $_POST['tag'], which should be like</p>
+          <p><strong style="color:red">The numbering 1,2,3 is done automatically.</strong></p>
+          <ul>
+            <li>$_POST['tag'][1] = "Some Value"</li>
+            <li>$_POST['tag'][2] = "Some Value"</li>
+            <li>$_POST['tag'][3] = "Some Value"</li>
+          </ul>
+          <p><strong>Param : <span style="color:red;">data-mt-tag-input-name</span></strong></p>
+          <p><strong>Default : tag</strong></p>
+        </div>
+
+        <hr/>
+
+        <div class="documentation_box">
+          <h3 id="data-mt-custom-param-">Extra Params on requests</h3>
+          <p><strong>Param : <span style="color:red;">data-mt-custom-param-%param-name%="%param-value%"</span></strong></p>
+          <p><strong>Examples</strong> | The Request Method is "POST", if you're using "GET" method, instead of $_POST it's $_GET</p>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>HTML Param</th>
+                <th>PHP Receives</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>data-mt-custom-param-_lang="EN"</td>
+                <td>$_POST['_lang'] = "EN"</td>
+              </tr>
+              <tr>
+                <td>data-mt-custom-param-user_id="1"</td>
+                <td>$_POST['user_id'] = 1</td>
+              </tr>
+              <tr>
+                <td>data-mt-custom-param-page_name="User Guide"</td>
+                <td>$_POST['page_name'] = "User Guide"</td>
+              </tr>
+              <tr>
+                <td colspan=2 class="text-center text-primary">And many more.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr/>
+
+        <div class="documentation_box">
+          <h3 id="data-mt-skeleton">Change the Display Skeleton</h3>
+          <p>Change the Display Skeleton structure, of how you're displaying the fetched results</p>
+          <p><strong>Param : <span style="color:red;">data-mt-skeleton</span></strong></p>
+          <p><strong>Default : default</strong></p>
+        </div>
+        
+        <hr/>
+
+
+      </div>
+    </div>
+
+    <hr/>
+
+    <div id="customize" class="row">
+      <div class="col-lg-12">
+        <h2 class="text-warning text-center">Customization & Changes</h2>
+
+        <h3 class="text-primary text-center">Special Skeleton Setting</h3>
+
+        <img src="img/skeleton_structure.png"/>
+
+        <hr/>
+
+        <h3 class="text-center text-primary">Events Assigned & Interaction Logic Changes</h3>
+
+        <hr/>
+
+        <h4 class="text-success text-center">Edit the tags display structure</h4>
+
+        <img src="img/tag_structure.png"/>
+
+        <hr/>
+
+        <h4 class="text-success text-center">Change the Default Plugin Settings Easily</h4>
+
+        <img src="img/default_settings.png"/>
+      </div>
+    </div>
+
+    <hr/>
+
+    <div class="footer">
+      <p>&copy; Easy-Development 2013</p>
+    </div>
+
+  </div> <!-- /container -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+</body>
+</html>

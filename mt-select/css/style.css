@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(http://themes.googleusercontent.com/static/fonts/roboto/v9/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v9/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff');
+}
+
+.mt_search_list_container {
+  z-index: 9999;
+  position: relative;
+  border: 1px solid #eeeeee;
+  border-top: 1px solid #3498db;
+  background: #fff;
+  width: 220px;
+  max-height: 200px;
+  display: block;
+  overflow-y: scroll;
+}
+.mt_search_list_container .mt_entry_container {
+  padding: 10px;
+  padding-bottom: 0;
+  min-height: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.mt_search_list_container .mt_entry_container:not(.inactive):hover,
+.mt_search_list_container .mt_entry_container.active {
+  background: #3498db;
+  color:#eeeeee;
+}
+
+.mt_search_list_container .mt_entry_container img {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+.mt_search_list_container .mt_entry_container .left {
+  position: absolute;
+}
+.mt_search_list_container .mt_entry_container .right {
+  margin-bottom: -10px;
+  margin-left: 50px;
+}
+.mt_search_list_container .mt_entry_container .right .name {
+  color: #616161;
+  font-size: 12px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  margin-top: 3px;
+  margin-bottom: 0;
+}
+.mt_search_list_container .mt_entry_container .right .description {
+  color: #929292;
+  font-size: 10px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  margin-top: 1px;
+  margin-bottom: 0;
+}
+.mt_search_list_container .mt_entry_container:after {
+  clear: both;
+  visibility: hidden;
+  content: '.';
+}
+
+.mt_search_list_container .mt_entry_container:not(.inactive):hover .right .name,
+.mt_search_list_container .mt_entry_container:not(.inactive):hover .right .description,
+.mt_search_list_container .mt_entry_container.active .right .name,
+.mt_search_list_container .mt_entry_container.active .right .description {
+  color:#eeeeee;
+}
+
+.mt-tag-container .mt-tag-element {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 15px;
+  border: 1px solid #3498db;
+  padding: 0 10px;
+  color: #3498db;
+  margin-right: 15px;
+  float: left;
+  margin-top: 5px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  line-height: 1.5;
+}
+.mt-tag-container .mt-tag-element:hover {
+  background: #3498db;
+  color: #fff;
+}
+.mt-tag-container .mt-tag-element a {
+  padding: 0;
+  border: none;
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  margin-right: 0;
+  margin-left: 10px;
+  margin-bottom: 2px;
+  background: url('../img/close-tag-icon.png') no-repeat center center;
+  text-indent: -9999px;
+  cursor: pointer;
+  float: right;
+  margin-top: 7px;
+}
+.mt-tag-container .mt-tag-element a:hover {
+  background: url('../img/close-tag-icon-hover.png') no-repeat center center;
+}
+
+.mt_search_message {
+  z-index: 9999;
+  position: relative;
+  border: 1px solid #eeeeee;
+  border-top: 1px solid #3498db;
+  background: #fff;
+  width: 200px;
+  padding: 10px;
+}
